@@ -1,5 +1,5 @@
 <p align=center>
-    <img width=400 src="http://www.webfunny.cn/resource/logo-letter.png"/>
+    <img width=400 src="https://images.gitee.com/uploads/images/2020/0601/173301_1013328b_1665425.png"/>
 </p>
 
 
@@ -19,28 +19,18 @@
 
 ### 了解作品  
 
-   [【官网简介】](http://www.webfunny.cn/home.html) | 
+   [【功能简介】](http://www.webfunny.cn/home.html?source=github) | 
    [【Demo效果】](http://www.webfunny.cn/demo/home.html) | 
-   [【更新日志】](http://www.webfunny.cn/update.html) |
    [【关于开源】](http://www.webfunny.cn/faq.html?tab=2)
- 
-   
-
-### 私有化部署方式
-
-   [【部署教程】](https://github.com/a597873885/webfunny_monitor/blob/master/DES.md)
-   
-   [【Docker部署】](https://github.com/a597873885/webfunny_monitor/blob/master/DES_DOCKER.md)
-   
-### 联系作者微信
-
-   微信号：webfunny_2020
-
-   <img width=150 src="http://www.webfunny.cn/src/assets/img/wx_add.jpeg"/>
 
 ### 压力测试
 
 可支持日活千万级别PV量。
+
+### 私有化部署方式
+
+   [【正常部署】](https://github.com/a597873885/webfunny_monitor/blob/master/DES.md) | 
+   [【Docker容器化部署】](https://github.com/a597873885/webfunny_monitor/blob/master/DES_DOCKER.md)
 
 ### 目录结构
 ```
@@ -62,7 +52,10 @@
     |
     |——interceptor/                            * 拦截器代码（监控到的异常都会经过拦截器，使用者可以自定义报警）
     |             |
-    |             |—— config/dingRobot.js      * 钉钉机器人配置
+    |             |—— customerWarning.js       * 对项目总体评分的拦截
+    |             |—— httpRequest.js           * 产生接口请求会被拦截到
+    |             |—— javascriptError.js       * 产生js报错会被拦截到
+    |             |—— resourceError.js         * 产生静态资源加载失败的情况会被拦截到
     |
     |——lib/
     |     |
@@ -75,8 +68,6 @@
     |      |
     |      |——info/                            * 普通日志打印目录
     |
-    |——schema/                                 * 基础表数据库字段设计
-    |——schema_con/                             * 需要分表的数据库字段设计
     |
     |——modules/
     |         |
@@ -95,3 +86,5 @@
 
     |—— 其他文件或目录，使用者大可不必关注
 ```
+
+
